@@ -27,8 +27,8 @@ function obtenerContador() {
 // Declara una constante llamada NOMBRE_CURSO con el valor
 // "Fundamentos de JavaScript" y retórnala.
 function obtenerNombreCurso() {
- const nombre_curso = "Fundamentos de JavaScript";
- return nombre_curso;
+ const NOMBRE_CURSO = "Fundamentos de JavaScript";
+ return NOMBRE_CURSO;
 
 }
 
@@ -62,7 +62,7 @@ function calcularTotal() {
  let descuento = 10;
  descuento = 25; 
 
- total = precioBase - descuento;
+ const total = precioBase - descuento;
 
  return {
   precioBase,
@@ -80,9 +80,9 @@ function identificarTipos() {
   const activo = true;
 
   return {
-    tipoEdad: undefined, // Reemplaza undefined por typeof de edad
-    tipoNombre: undefined, // Reemplaza undefined por typeof de nombre
-    tipoActivo: undefined, // Reemplaza undefined por typeof de activo
+    tipoEdad: typeof(edad), // Reemplaza undefined por typeof de edad
+    tipoNombre: typeof(nombre), // Reemplaza undefined por typeof de nombre
+    tipoActivo: typeof(activo), // Reemplaza undefined por typeof de activo
   };
 }
 
@@ -93,7 +93,11 @@ function identificarTipos() {
 //   { antes: undefined, despues: "Oscar" }
 // Pista: declara "nombre" con var después del primer acceso.
 function demostrarHoisting() {
-  // Tu código aquí
+  const antes = nombre; // undefined
+  var nombre = "Oscar";
+  const despues = nombre; // "Oscar"
+
+  return { antes, despues };
   // Paso 1: guarda el valor de "nombre" en una variable "antes"
   // Paso 2: declara var nombre = "Oscar"
   // Paso 3: guarda el valor de "nombre" en una variable "despues"
