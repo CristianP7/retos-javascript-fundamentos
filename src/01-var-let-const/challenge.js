@@ -9,7 +9,8 @@
 // Declara una constante llamada PI con el valor 3.14159
 // y retórnala.
 function obtenerPI() {
-  // Tu código aquí
+ const PI = 3.14159;
+ return PI;
 }
 
 // --- Reto 2: Reasignación con let ---
@@ -17,14 +18,18 @@ function obtenerPI() {
 // Luego reasígnala a 5.
 // Retorna el valor final de contador.
 function obtenerContador() {
-  // Tu código aquí
+  let contador = 0;
+  contador = 5;
+  return contador;
 }
 
 // --- Reto 3: Constante de texto ---
 // Declara una constante llamada NOMBRE_CURSO con el valor
 // "Fundamentos de JavaScript" y retórnala.
 function obtenerNombreCurso() {
-  // Tu código aquí
+ const nombre_curso = "Fundamentos de JavaScript";
+ return nombre_curso;
+
 }
 
 // --- Reto 4: Reasignación de strings ---
@@ -34,7 +39,16 @@ function obtenerNombreCurso() {
 //   { inicial: "hola", final: "adiós" }
 // Pista: guarda el valor inicial antes de reasignar.
 function reasignarMensaje() {
-  // Tu código aquí
+  let mensaje = "hola";
+  const inicial = mensaje;
+
+  mensaje = "adiós";
+  const final = mensaje;
+
+  return {
+    inicial: inicial,
+    final: final
+  };
 }
 
 // --- Reto 5: Cálculo con const y let ---
@@ -44,7 +58,17 @@ function reasignarMensaje() {
 // Calcula el total como: precioBase - descuento.
 // Retorna un objeto: { precioBase, descuento, total }
 function calcularTotal() {
-  // Tu código aquí
+ const precioBase = 100;
+ let descuento = 10;
+ descuento = 25; 
+
+ total = precioBase - descuento;
+
+ return {
+  precioBase,
+  descuento,
+  total
+ }
 }
 
 // --- Reto 6: Identificar tipos de dato ---
@@ -76,7 +100,7 @@ function demostrarHoisting() {
   // Paso 4: retorna { antes, despues }
 }
 
-module.exports = {
+export {
   obtenerPI,
   obtenerContador,
   obtenerNombreCurso,
