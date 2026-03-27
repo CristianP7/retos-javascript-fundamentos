@@ -7,6 +7,7 @@
 
 // --- Reto 1: Identificar tipos primitivos ---
 // Declara las siguientes constantes con los valores indicados:
+
 //   texto = "hola"
 //   numero = 42
 //   booleano = true
