@@ -1,6 +1,7 @@
 // ============================================
 // Reto: Tipos de datos en JavaScript
 // ============================================
+
 // Completa cada función según las instrucciones.
 // Ejecuta los tests con: npx vitest src/02-tipos-de-datos
 // ============================================
