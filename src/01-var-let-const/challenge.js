@@ -39,16 +39,10 @@ function obtenerNombreCurso() {
 //   { inicial: "hola", final: "adiós" }
 // Pista: guarda el valor inicial antes de reasignar.
 function reasignarMensaje() {
-  let mensaje = "hola";
+  let mensaje = 'hola';
   const inicial = mensaje;
-
-  mensaje = "adiós";
-  const final = mensaje;
-
-  return {
-    inicial: inicial,
-    final: final
-  };
+  mensaje = 'adiós';
+  return {inicial, final: mensaje};
 }
 
 // --- Reto 5: Cálculo con const y let ---
@@ -93,15 +87,14 @@ function identificarTipos() {
 //   { antes: undefined, despues: "Oscar" }
 // Pista: declara "nombre" con var después del primer acceso.
 function demostrarHoisting() {
-  const antes = nombre; // undefined
-  var nombre = "Oscar";
-  const despues = nombre; // "Oscar"
-
-  return { antes, despues };
   // Paso 1: guarda el valor de "nombre" en una variable "antes"
+  var antes = nombre;
   // Paso 2: declara var nombre = "Oscar"
+  var nombre = 'Oscar';
   // Paso 3: guarda el valor de "nombre" en una variable "despues"
+  var despues = nombre;
   // Paso 4: retorna { antes, despues }
+  return {antes , despues};
 }
 
 export {
